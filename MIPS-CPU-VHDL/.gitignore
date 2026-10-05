@@ -1,0 +1,23 @@
+# GHDL / simulation output
+ghdl-work/
+waveform.ghw
+waveform.vcd
+waveform.vcd.gz
+transcript
+*.cf
+
+# FPGA / synthesis output
+reports/
+*.bit
+*.frm
+*.fasm
+*.json
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large optional course toolchain
+/tools/ROrgPrLLVM/

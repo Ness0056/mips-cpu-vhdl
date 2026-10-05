@@ -1,0 +1,145 @@
+
+ghdl-work/bubblesort.c.out:	file format elf32-mips
+architecture: mipsel
+start address: 0x00000000
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x000001d4 memsz 0x000001d4 flags r-x
+    LOAD off    0x00010800 vaddr 0x00000800 paddr 0x00000800 align 2**16
+         filesz 0x00000028 memsz 0x00000400 flags rw-
+   STACK off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**64
+         filesz 0x00000000 memsz 0x00000000 flags rw-
+
+Dynamic Section:
+
+Sections:
+Idx Name          Size     VMA      Type
+  0               00000000 00000000 
+  1 .text         000001d4 00000000 TEXT
+  2 .data         00000028 00000800 DATA
+  3 .bss          00000000 00000c00 BSS
+  4 .shstrtab     0000001c 00000000 
+
+SYMBOL TABLE:
+
+Disassembly of section .text:
+
+00000000 <.text>:
+       0: e8 ff bd 27  	addiu	$sp, $sp, -0x18
+       4: 14 00 bf af  	sw	$ra, 0x14($sp)
+       8: 10 00 be af  	sw	$fp, 0x10($sp)
+       c: 25 f0 a0 03  	move	$fp, $sp
+      10: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      14: 00 08 24 24  	addiu	$4, $1, 0x800
+      18: 0a 00 05 24  	addiu	$5, $zero, 0xa <.text+0xa>
+      1c: 0a 00 00 0c  	jal	0x28 <.text+0x28>
+      20: 00 00 00 00  	nop <.text>
+      24: 01 00 1a 24  	addiu	$26, $zero, 0x1 <.text+0x1>
+      28: d8 ff bd 27  	addiu	$sp, $sp, -0x28
+      2c: 24 00 bf af  	sw	$ra, 0x24($sp)
+      30: 20 00 be af  	sw	$fp, 0x20($sp)
+      34: 25 f0 a0 03  	move	$fp, $sp
+      38: 1c 00 c4 af  	sw	$4, 0x1c($fp)
+      3c: 18 00 c5 af  	sw	$5, 0x18($fp)
+      40: 14 00 c0 af  	sw	$zero, 0x14($fp)
+      44: 13 00 00 08  	j	0x4c <.text+0x4c>
+      48: 00 00 00 00  	nop <.text>
+      4c: 14 00 c1 8f  	lw	$1, 0x14($fp)
+      50: 18 00 c2 8f  	lw	$2, 0x18($fp)
+      54: ff ff 42 24  	addiu	$2, $2, -0x1
+      58: 2a 08 22 00  	slt	$1, $1, $2
+      5c: 31 00 20 10  	beqz	$1, 0x124 <.text+0x124>
+      60: 00 00 00 00  	nop <.text>
+      64: 1b 00 00 08  	j	0x6c <.text+0x6c>
+      68: 00 00 00 00  	nop <.text>
+      6c: 10 00 c0 af  	sw	$zero, 0x10($fp)
+      70: 1e 00 00 08  	j	0x78 <.text+0x78>
+      74: 00 00 00 00  	nop <.text>
+      78: 10 00 c1 8f  	lw	$1, 0x10($fp)
+      7c: 18 00 c3 8f  	lw	$3, 0x18($fp)
+      80: 14 00 c2 8f  	lw	$2, 0x14($fp)
+      84: 27 10 40 00  	not	$2, $2
+      88: 21 10 43 00  	addu	$2, $2, $3
+      8c: 2a 08 22 00  	slt	$1, $1, $2
+      90: 1d 00 20 10  	beqz	$1, 0x108 <.text+0x108>
+      94: 00 00 00 00  	nop <.text>
+      98: 28 00 00 08  	j	0xa0 <.text+0xa0>
+      9c: 00 00 00 00  	nop <.text>
+      a0: 1c 00 c1 8f  	lw	$1, 0x1c($fp)
+      a4: 10 00 c2 8f  	lw	$2, 0x10($fp)
+      a8: 21 10 42 00  	addu	$2, $2, $2
+      ac: 21 10 42 00  	addu	$2, $2, $2
+      b0: 21 08 22 00  	addu	$1, $1, $2
+      b4: 00 00 22 8c  	lw	$2, 0x0($1)
+      b8: 04 00 21 8c  	lw	$1, 0x4($1)
+      bc: 2a 08 22 00  	slt	$1, $1, $2
+      c0: 0a 00 20 10  	beqz	$1, 0xec <.text+0xec>
+      c4: 00 00 00 00  	nop <.text>
+      c8: 34 00 00 08  	j	0xd0 <.text+0xd0>
+      cc: 00 00 00 00  	nop <.text>
+      d0: 1c 00 c4 8f  	lw	$4, 0x1c($fp)
+      d4: 10 00 c5 8f  	lw	$5, 0x10($fp)
+      d8: 01 00 a6 24  	addiu	$6, $5, 0x1 <.text+0x1>
+      dc: 4f 00 00 0c  	jal	0x13c <.text+0x13c>
+      e0: 00 00 00 00  	nop <.text>
+      e4: 3b 00 00 08  	j	0xec <.text+0xec>
+      e8: 00 00 00 00  	nop <.text>
+      ec: 3d 00 00 08  	j	0xf4 <.text+0xf4>
+      f0: 00 00 00 00  	nop <.text>
+      f4: 10 00 c1 8f  	lw	$1, 0x10($fp)
+      f8: 01 00 21 24  	addiu	$1, $1, 0x1 <.text+0x1>
+      fc: 10 00 c1 af  	sw	$1, 0x10($fp)
+     100: 1e 00 00 08  	j	0x78 <.text+0x78>
+     104: 00 00 00 00  	nop <.text>
+     108: 44 00 00 08  	j	0x110 <.text+0x110>
+     10c: 00 00 00 00  	nop <.text>
+     110: 14 00 c1 8f  	lw	$1, 0x14($fp)
+     114: 01 00 21 24  	addiu	$1, $1, 0x1 <.text+0x1>
+     118: 14 00 c1 af  	sw	$1, 0x14($fp)
+     11c: 13 00 00 08  	j	0x4c <.text+0x4c>
+     120: 00 00 00 00  	nop <.text>
+     124: 25 e8 c0 03  	move	$sp, $fp
+     128: 20 00 be 8f  	lw	$fp, 0x20($sp)
+     12c: 24 00 bf 8f  	lw	$ra, 0x24($sp)
+     130: 28 00 bd 27  	addiu	$sp, $sp, 0x28 <.text+0x28>
+     134: 08 00 e0 03  	jr	$ra
+     138: 00 00 00 00  	nop <.text>
+     13c: e8 ff bd 27  	addiu	$sp, $sp, -0x18
+     140: 14 00 bf af  	sw	$ra, 0x14($sp)
+     144: 10 00 be af  	sw	$fp, 0x10($sp)
+     148: 25 f0 a0 03  	move	$fp, $sp
+     14c: 0c 00 c4 af  	sw	$4, 0xc($fp)
+     150: 08 00 c5 af  	sw	$5, 0x8($fp)
+     154: 04 00 c6 af  	sw	$6, 0x4($fp)
+     158: 0c 00 c1 8f  	lw	$1, 0xc($fp)
+     15c: 08 00 c2 8f  	lw	$2, 0x8($fp)
+     160: 21 10 42 00  	addu	$2, $2, $2
+     164: 21 10 42 00  	addu	$2, $2, $2
+     168: 21 08 22 00  	addu	$1, $1, $2
+     16c: 00 00 21 8c  	lw	$1, 0x0($1)
+     170: 00 00 c1 af  	sw	$1, 0x0($fp)
+     174: 0c 00 c2 8f  	lw	$2, 0xc($fp)
+     178: 04 00 c1 8f  	lw	$1, 0x4($fp)
+     17c: 21 08 21 00  	addu	$1, $1, $1
+     180: 21 08 21 00  	addu	$1, $1, $1
+     184: 21 08 41 00  	addu	$1, $2, $1
+     188: 00 00 21 8c  	lw	$1, 0x0($1)
+     18c: 08 00 c3 8f  	lw	$3, 0x8($fp)
+     190: 21 18 63 00  	addu	$3, $3, $3
+     194: 21 18 63 00  	addu	$3, $3, $3
+     198: 21 10 43 00  	addu	$2, $2, $3
+     19c: 00 00 41 ac  	sw	$1, 0x0($2)
+     1a0: 00 00 c1 8f  	lw	$1, 0x0($fp)
+     1a4: 0c 00 c2 8f  	lw	$2, 0xc($fp)
+     1a8: 04 00 c3 8f  	lw	$3, 0x4($fp)
+     1ac: 21 18 63 00  	addu	$3, $3, $3
+     1b0: 21 18 63 00  	addu	$3, $3, $3
+     1b4: 21 10 43 00  	addu	$2, $2, $3
+     1b8: 00 00 41 ac  	sw	$1, 0x0($2)
+     1bc: 25 e8 c0 03  	move	$sp, $fp
+     1c0: 10 00 be 8f  	lw	$fp, 0x10($sp)
+     1c4: 14 00 bf 8f  	lw	$ra, 0x14($sp)
+     1c8: 18 00 bd 27  	addiu	$sp, $sp, 0x18 <.text+0x18>
+     1cc: 08 00 e0 03  	jr	$ra
+     1d0: 00 00 00 00  	nop <.text>

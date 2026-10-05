@@ -1,0 +1,109 @@
+
+ghdl-work/clip.s.out:	file format elf32-mips
+architecture: mipsel
+start address: 0x00000000
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x00000144 memsz 0x00000144 flags r-x
+    LOAD off    0x00010800 vaddr 0x00000800 paddr 0x00000800 align 2**16
+         filesz 0x00000028 memsz 0x00000400 flags rw-
+   STACK off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**64
+         filesz 0x00000000 memsz 0x00000000 flags rw-
+
+Dynamic Section:
+
+Sections:
+Idx Name          Size     VMA      Type
+  0               00000000 00000000 
+  1 .text         00000144 00000000 TEXT
+  2 .data         00000028 00000800 DATA
+  3 .bss          00000000 00000c00 BSS
+  4 .shstrtab     0000001c 00000000 
+
+SYMBOL TABLE:
+
+Disassembly of section .text:
+
+00000000 <.text>:
+       0: 03 00 00 0c  	jal	0xc <.text+0xc>
+       4: 00 00 00 00  	nop <.text>
+       8: 01 00 1a 24  	addiu	$26, $zero, 0x1 <.text+0x1>
+       c: 00 00 08 3c  	lui	$8, 0x0 <.text>
+      10: 00 08 08 8d  	lw	$8, 0x800($8)
+      14: 24 48 00 00  	and	$9, $zero, $zero
+      18: 00 00 18 3c  	lui	$24, 0x0 <.text>
+      1c: 04 08 18 8f  	lw	$24, 0x804($24)
+      20: 00 00 19 3c  	lui	$25, 0x0 <.text>
+      24: 08 08 39 8f  	lw	$25, 0x808($25)
+      28: 00 00 0d 3c  	lui	$13, 0x0 <.text>
+      2c: 0c 08 ad 8d  	lw	$13, 0x80c($13)
+      30: 00 00 0e 3c  	lui	$14, 0x0 <.text>
+      34: 10 08 ce 8d  	lw	$14, 0x810($14)
+      38: 00 00 0f 3c  	lui	$15, 0x0 <.text>
+      3c: 14 08 ef 8d  	lw	$15, 0x814($15)
+      40: 3e 00 28 11  	beq	$9, $8, 0x13c <.text+0x13c>
+      44: 00 00 00 00  	nop <.text>
+      48: 07 00 20 11  	beqz	$9, 0x68 <.text+0x68>
+      4c: 00 00 00 00  	nop <.text>
+      50: 09 00 2d 11  	beq	$9, $13, 0x78 <.text+0x78>
+      54: 00 00 00 00  	nop <.text>
+      58: 0b 00 2e 11  	beq	$9, $14, 0x88 <.text+0x88>
+      5c: 00 00 00 00  	nop <.text>
+      60: 0d 00 2f 11  	beq	$9, $15, 0x98 <.text+0x98>
+      64: 00 00 00 00  	nop <.text>
+      68: 00 00 0a 3c  	lui	$10, 0x0 <.text>
+      6c: 18 08 4a 8d  	lw	$10, 0x818($10)
+      70: 2a 00 00 08  	j	0xa8 <.text+0xa8>
+      74: 00 00 00 00  	nop <.text>
+      78: 00 00 0a 3c  	lui	$10, 0x0 <.text>
+      7c: 1c 08 4a 8d  	lw	$10, 0x81c($10)
+      80: 2a 00 00 08  	j	0xa8 <.text+0xa8>
+      84: 00 00 00 00  	nop <.text>
+      88: 00 00 0a 3c  	lui	$10, 0x0 <.text>
+      8c: 20 08 4a 8d  	lw	$10, 0x820($10)
+      90: 2a 00 00 08  	j	0xa8 <.text+0xa8>
+      94: 00 00 00 00  	nop <.text>
+      98: 00 00 0a 3c  	lui	$10, 0x0 <.text>
+      9c: 24 08 4a 8d  	lw	$10, 0x824($10)
+      a0: 2a 00 00 08  	j	0xa8 <.text+0xa8>
+      a4: 00 00 00 00  	nop <.text>
+      a8: 2a 58 58 01  	slt	$11, $10, $24
+      ac: 06 00 6d 11  	beq	$11, $13, 0xc8 <.text+0xc8>
+      b0: 00 00 00 00  	nop <.text>
+      b4: 2a 58 2a 03  	slt	$11, $25, $10
+      b8: 06 00 6d 11  	beq	$11, $13, 0xd4 <.text+0xd4>
+      bc: 00 00 00 00  	nop <.text>
+      c0: 4c 00 00 08  	j	0x130 <.text+0x130>
+      c4: 00 00 00 00  	nop <.text>
+      c8: 20 50 00 03  	add	$10, $24, $zero
+      cc: 36 00 00 08  	j	0xd8 <.text+0xd8>
+      d0: 00 00 00 00  	nop <.text>
+      d4: 20 50 20 03  	add	$10, $25, $zero
+      d8: 07 00 20 11  	beqz	$9, 0xf8 <.text+0xf8>
+      dc: 00 00 00 00  	nop <.text>
+      e0: 09 00 2d 11  	beq	$9, $13, 0x108 <.text+0x108>
+      e4: 00 00 00 00  	nop <.text>
+      e8: 0b 00 2e 11  	beq	$9, $14, 0x118 <.text+0x118>
+      ec: 00 00 00 00  	nop <.text>
+      f0: 0d 00 2f 11  	beq	$9, $15, 0x128 <.text+0x128>
+      f4: 00 00 00 00  	nop <.text>
+      f8: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      fc: 18 08 2a ac  	sw	$10, 0x818($1)
+     100: 4c 00 00 08  	j	0x130 <.text+0x130>
+     104: 00 00 00 00  	nop <.text>
+     108: 00 00 01 3c  	lui	$1, 0x0 <.text>
+     10c: 1c 08 2a ac  	sw	$10, 0x81c($1)
+     110: 4c 00 00 08  	j	0x130 <.text+0x130>
+     114: 00 00 00 00  	nop <.text>
+     118: 00 00 01 3c  	lui	$1, 0x0 <.text>
+     11c: 20 08 2a ac  	sw	$10, 0x820($1)
+     120: 4c 00 00 08  	j	0x130 <.text+0x130>
+     124: 00 00 00 00  	nop <.text>
+     128: 00 00 01 3c  	lui	$1, 0x0 <.text>
+     12c: 24 08 2a ac  	sw	$10, 0x824($1)
+     130: 20 48 2d 01  	add	$9, $9, $13
+     134: 10 00 00 08  	j	0x40 <.text+0x40>
+     138: 00 00 00 00  	nop <.text>
+     13c: 08 00 e0 03  	jr	$ra
+     140: 00 00 00 00  	nop <.text>

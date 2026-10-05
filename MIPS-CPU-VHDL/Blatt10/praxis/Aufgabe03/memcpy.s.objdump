@@ -1,0 +1,45 @@
+
+ghdl-work/memcpy.s.out:	file format elf32-mips
+architecture: mipsel
+start address: 0x00000000
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x00000044 memsz 0x00000044 flags r-x
+    LOAD off    0x00010800 vaddr 0x00000800 paddr 0x00000800 align 2**16
+         filesz 0x00000020 memsz 0x00000400 flags rw-
+   STACK off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**64
+         filesz 0x00000000 memsz 0x00000000 flags rw-
+
+Dynamic Section:
+
+Sections:
+Idx Name          Size     VMA      Type
+  0               00000000 00000000 
+  1 .text         00000044 00000000 TEXT
+  2 .data         00000020 00000800 DATA
+  3 .bss          00000000 00000c00 BSS
+  4 .shstrtab     0000001c 00000000 
+
+SYMBOL TABLE:
+
+Disassembly of section .text:
+
+00000000 <.text>:
+       0: 00 00 08 3c  	lui	$8, 0x0 <.text>
+       4: 00 08 08 8d  	lw	$8, 0x800($8)
+       8: 00 00 09 3c  	lui	$9, 0x0 <.text>
+       c: 04 08 29 8d  	lw	$9, 0x804($9)
+      10: 00 00 0a 3c  	lui	$10, 0x0 <.text>
+      14: 08 08 4a 8d  	lw	$10, 0x808($10)
+      18: 00 00 0b 3c  	lui	$11, 0x0 <.text>
+      1c: 0c 08 6b 8d  	lw	$11, 0x80c($11)
+      20: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      24: 10 08 28 ac  	sw	$8, 0x810($1)
+      28: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      2c: 14 08 29 ac  	sw	$9, 0x814($1)
+      30: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      34: 18 08 2a ac  	sw	$10, 0x818($1)
+      38: 00 00 01 3c  	lui	$1, 0x0 <.text>
+      3c: 1c 08 2b ac  	sw	$11, 0x81c($1)
+      40: 01 00 1a 24  	addiu	$26, $zero, 0x1 <.text+0x1>
