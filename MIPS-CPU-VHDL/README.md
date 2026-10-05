@@ -1,6 +1,6 @@
 # MIPS CPU in VHDL
 
-A progressively developed **MIPS processor implementation in VHDL**, built as part of the *Rechnerorganisation Praktikum* at TU Berlin.
+A progressively developed **MIPS processor implementation in VHDL**
 
 The project starts with fundamental digital building blocks and develops them step by step into a complete CPU design, including an ALU, register file, control logic, memory interfaces, a single-cycle processor, a multi-cycle processor, testbenches, and an FPGA wrapper.
 
@@ -120,8 +120,4 @@ This project gave me hands-on experience with how a processor is assembled from 
 
 Key topics included datapath design, control signal generation, ALU design, register-file access, memory interfacing, instruction decoding, branching, finite-state-machine control, simulation, and FPGA-oriented hardware design.
 
-## Academic context
 
-Developed during the **Rechnerorganisation Praktikum, TU Berlin (WiSe 2025/26)**.
-
-This repository is presented as a portfolio/archive of my coursework. Course-provided framework files and helper tooling remain included where required to reproduce the original exercises.
