@@ -4,7 +4,7 @@ A progressively developed **MIPS processor implementation in VHDL**
 
 The project starts with fundamental digital building blocks and develops them step by step into a complete CPU design, including an ALU, register file, control logic, memory interfaces, a single-cycle processor, a multi-cycle processor, testbenches, and an FPGA wrapper.
 
-
+![MIPS CPU architecture](mips-cpu-vhdl/MIPS-CPU-VHDL/docs/mips-cpu-architecture.png)
 ## Highlights
 
 - VHDL implementation of reusable digital logic components
